@@ -94,14 +94,14 @@ export default function Header() {
           </Link>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link
+          {/* <Link
             href="#contact"
             onClick={(e) => handleSmoothScroll(e, "#contact")}
           >
             <Button className="bg-amber-700 hover:bg-amber-800 text-white">
               Get Started
             </Button>
-          </Link>
+          </Link> */}
         </div>
       </nav>
       {/* Mobile menu */}
@@ -174,7 +174,7 @@ export default function Header() {
                   </Link>
                 </div>
                 <div className="py-6">
-                  <Link
+                  {/* <Link
                     href="#contact"
                     onClick={(e) => {
                       handleSmoothScroll(e, "#contact");
@@ -185,7 +185,7 @@ export default function Header() {
                     <Button className="w-full bg-amber-700 hover:bg-amber-800 text-white">
                       Get Started
                     </Button>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>

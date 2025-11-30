@@ -70,7 +70,17 @@ export default function HeroCard({
                 <BookmarkIcon className="h-5 w-5" />
               </button>
             </div>
-            <p className="text-sm text-gray-600">{location}</p>
+            <div className="mb-2">
+              <p className="text-sm text-gray-600">{location}</p>
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-amber-700 hover:text-amber-800 font-medium underline mt-1 inline-block"
+              >
+                View on Google Maps
+              </a>
+            </div>
             {availability && (
               <p className="text-sm font-medium text-amber-700 mt-2">
                 {availability}

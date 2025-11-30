@@ -200,54 +200,25 @@ export default function ContactSection() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-amber-100">
                     <MapPinIcon className="h-6 w-6 text-amber-700" />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
                       Address
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 mb-3">
+                      KRCR Colony, Bachupally
+                      <br />
                       Hyderabad, Telangana
                       <br />
                       India
                     </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-amber-100">
-                    <PhoneIcon className="h-6 w-6 text-amber-700" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      Phone
-                    </h3>
-                    <p className="text-gray-600">
-                      {process.env.NEXT_PUBLIC_PHONE
-                        ? `+91 ${process.env.NEXT_PUBLIC_PHONE}`
-                        : ""}
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-amber-100">
-                    <EnvelopeIcon className="h-6 w-6 text-amber-700" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      Email
-                    </h3>
-                    <p className="text-gray-600">
-                      {process.env.NEXT_PUBLIC_EMAIL ||
-                        "info@prasthanamdevelopers.com"}
-                    </p>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=KRCR+Colony+Bachupally+Hyderabad+Telangana+India"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-amber-700 hover:text-amber-800 font-medium underline"
+                    >
+                      View on Google Maps
+                    </a>
                   </div>
                 </div>
               </CardContent>
@@ -255,10 +226,41 @@ export default function ContactSection() {
 
             <Card className="bg-white">
               <CardHeader>
-                <CardTitle>Socials</CardTitle>
+                <CardTitle>Contact & Socials</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-4 gap-4">
+                  {/* Email */}
+                  <a
+                    href={`mailto:${
+                      process.env.NEXT_PUBLIC_EMAIL ||
+                      "info@prasthanamdevelopers.com"
+                    }`}
+                    className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-50 hover:bg-amber-50 transition-colors group"
+                  >
+                    <EnvelopeIcon className="h-6 w-6 text-gray-600 group-hover:text-amber-700" />
+                    <span className="text-xs mt-2 text-gray-600 group-hover:text-amber-700">
+                      Email
+                    </span>
+                  </a>
+
+                  {/* Phone */}
+                  <a
+                    href={
+                      process.env.NEXT_PUBLIC_PHONE
+                        ? `tel:+91${process.env.NEXT_PUBLIC_PHONE.replace(
+                            /\D/g,
+                            ""
+                          )}`
+                        : "#"
+                    }
+                    className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-50 hover:bg-amber-50 transition-colors group"
+                  >
+                    <PhoneIcon className="h-6 w-6 text-gray-600 group-hover:text-amber-700" />
+                    <span className="text-xs mt-2 text-gray-600 group-hover:text-amber-700">
+                      Phone
+                    </span>
+                  </a>
                   {/* Facebook */}
                   <a
                     href="#"
@@ -394,7 +396,14 @@ export default function ContactSection() {
 
                   {/* WhatsApp */}
                   <a
-                    href="#"
+                    href={
+                      process.env.NEXT_PUBLIC_PHONE
+                        ? `https://wa.me/91${process.env.NEXT_PUBLIC_PHONE.replace(
+                            /\D/g,
+                            ""
+                          )}`
+                        : "#"
+                    }
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-50 hover:bg-amber-50 transition-colors group"

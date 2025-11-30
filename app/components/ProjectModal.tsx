@@ -179,16 +179,26 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 {project.name}
               </h2>
-              <div className="flex items-center gap-2 text-gray-600 mb-6 flex-wrap">
-                <span className="text-sm">{project.location}</span>
-                <span className="text-gray-300">•</span>
-                <span className="text-sm">{project.type}</span>
-                {project.size && (
-                  <>
-                    <span className="text-gray-300">•</span>
-                    <span className="text-sm">{project.size}</span>
-                  </>
-                )}
+              <div className="mb-6">
+                <div className="flex items-center gap-2 text-gray-600 mb-2 flex-wrap">
+                  <span className="text-sm">{project.location}</span>
+                  <span className="text-gray-300">•</span>
+                  <span className="text-sm">{project.type}</span>
+                  {project.size && (
+                    <>
+                      <span className="text-gray-300">•</span>
+                      <span className="text-sm">{project.size}</span>
+                    </>
+                  )}
+                </div>
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(project.location)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-amber-700 hover:text-amber-800 font-medium underline"
+                >
+                  View on Google Maps
+                </a>
               </div>
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 leading-relaxed whitespace-pre-line">
