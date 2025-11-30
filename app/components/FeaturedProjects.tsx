@@ -44,7 +44,7 @@ This project represents our commitment to excellence in residential construction
   },
   {
     id: 2,
-    name: "Vivekananda Nagar",
+    name: "Kavya Residency",
     location: "Vivekananda Nagar, Hyderabad, Telangana",
     type: "Residential",
     image: "/vivekananda-nagar.jpeg",
@@ -52,7 +52,7 @@ This project represents our commitment to excellence in residential construction
       "/vivekananda-nagar.jpeg",
       //   "/vivekananda-nagar.jpeg", // You can add more images later
     ],
-    description: `Vivekananda Nagar is a well-planned residential community designed to provide a harmonious living experience. This project showcases our expertise in creating sustainable and beautiful living spaces.
+    description: `Kavya Residency is a well-planned residential community designed to provide a harmonious living experience. This project showcases our expertise in creating sustainable and beautiful living spaces.
 
 Project Highlights:
 • Thoughtfully designed residential units
