@@ -267,7 +267,7 @@ export default function ContactSection() {
                   </a>
                   {/* Instagram */}
                   <a
-                    href="#"
+                    href="https://www.instagram.com/prasthanamdevelopers"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-50 hover:bg-amber-50 transition-colors group"
@@ -285,7 +285,7 @@ export default function ContactSection() {
                   </a>
                   {/* Twitter/X */}
                   <a
-                    href="#"
+                    href="https://x.com/Prasthanamdev"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-50 hover:bg-amber-50 transition-colors group"
@@ -303,7 +303,7 @@ export default function ContactSection() {
                   </a>
                   {/* YouTube */}
                   <a
-                    href="#"
+                    href="https://www.youtube.com/@PRASTHANAMDEVELOPERS"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-50 hover:bg-amber-50 transition-colors group"

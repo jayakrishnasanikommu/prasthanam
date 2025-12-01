@@ -98,18 +98,18 @@ Special Features:
 
 This project demonstrates our ability to deliver residential developments that exceed expectations, providing residents with a superior living experience in one of Hyderabad's most desirable locations.`,
   },
-  {
-    id: 4,
-    name: "Premium Bungalow Project",
-    location: "Hyderabad, Telangana",
-    type: "Residential",
-    image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop",
-    ],
-    description: `Premium Bungalow Project offers luxurious standalone homes designed for those who appreciate space, privacy, and elegance. Each bungalow is crafted with meticulous attention to detail.`,
-  },
+  // {
+  //   id: 4,
+  //   name: "Premium Bungalow Project",
+  //   location: "Hyderabad, Telangana",
+  //   type: "Residential",
+  //   image:
+  //     "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop",
+  //   images: [
+  //     "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop",
+  //   ],
+  //   description: `Premium Bungalow Project offers luxurious standalone homes designed for those who appreciate space, privacy, and elegance. Each bungalow is crafted with meticulous attention to detail.`,
+  // },
   {
     id: 5,
     name: "Sree Krishna Sai Residency",

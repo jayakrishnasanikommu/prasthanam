@@ -32,83 +32,92 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200/50 rounded-b-3xl shadow-sm">
-      <nav
-        className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8"
-        aria-label="Global"
-      >
-        <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 flex items-center">
-            <Image
-              src="/logo.jpeg"
-              alt="Prasthanam Developers"
-              width={200}
-              height={60}
-              className="h-12 w-auto md:h-14 lg:h-16 object-contain"
-              priority
-            />
-          </Link>
-        </div>
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            <span className="sr-only">Open main menu</span>
-            {mobileMenuOpen ? (
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-            ) : (
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-            )}
-          </button>
-        </div>
-        <div className="hidden lg:flex lg:gap-x-12">
-          <Link
-            href="#services"
-            onClick={(e) => handleSmoothScroll(e, "#services")}
-            className="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-700"
-          >
-            Services
-          </Link>
-          <Link
-            href="#projects"
-            onClick={(e) => handleSmoothScroll(e, "#projects")}
-            className="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-700"
-          >
-            Projects
-          </Link>
-          <Link
-            href="#about"
-            onClick={(e) => handleSmoothScroll(e, "#about")}
-            className="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-700"
-          >
-            About
-          </Link>
-          <Link
-            href="#contact"
-            onClick={(e) => handleSmoothScroll(e, "#contact")}
-            className="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-700"
-          >
-            Contact
-          </Link>
-        </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          {/* <Link
-            href="#contact"
-            onClick={(e) => handleSmoothScroll(e, "#contact")}
-          >
-            <Button className="bg-amber-700 hover:bg-amber-800 text-white">
-              Get Started
-            </Button>
-          </Link> */}
-        </div>
-      </nav>
-      {/* Mobile menu */}
+    <>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200/50 rounded-b-3xl shadow-sm">
+        <nav
+          className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8"
+          aria-label="Global"
+        >
+          <div className="flex lg:flex-1">
+            <Link href="/" className="-m-1.5 p-1.5 flex items-center">
+              <Image
+                src="/logo.jpeg"
+                alt="Prasthanam Developers"
+                width={200}
+                height={60}
+                className="h-12 w-auto md:h-14 lg:h-16 object-contain"
+                priority
+              />
+            </Link>
+          </div>
+          <div className="flex lg:hidden">
+            <button
+              type="button"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              <span className="sr-only">Open main menu</span>
+              {mobileMenuOpen ? (
+                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              ) : (
+                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+              )}
+            </button>
+          </div>
+          <div className="hidden lg:flex lg:gap-x-12">
+            <Link
+              href="#services"
+              onClick={(e) => handleSmoothScroll(e, "#services")}
+              className="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-700"
+            >
+              Services
+            </Link>
+            <Link
+              href="#projects"
+              onClick={(e) => handleSmoothScroll(e, "#projects")}
+              className="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-700"
+            >
+              Projects
+            </Link>
+            <Link
+              href="#about"
+              onClick={(e) => handleSmoothScroll(e, "#about")}
+              className="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-700"
+            >
+              About
+            </Link>
+            <Link
+              href="#contact"
+              onClick={(e) => handleSmoothScroll(e, "#contact")}
+              className="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-700"
+            >
+              Contact
+            </Link>
+          </div>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            {/* <Link
+              href="#contact"
+              onClick={(e) => handleSmoothScroll(e, "#contact")}
+            >
+              <Button className="bg-amber-700 hover:bg-amber-800 text-white">
+                Get Started
+              </Button>
+            </Link> */}
+          </div>
+        </nav>
+      </header>
+      {/* Mobile menu - outside header to avoid z-index conflicts */}
       {mobileMenuOpen && (
-        <div className="lg:hidden" role="dialog" aria-modal="true">
-          <div className="fixed inset-0 z-50"></div>
-          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 rounded-l-3xl shadow-xl">
+        <div
+          className="lg:hidden fixed inset-0 z-[60]"
+          role="dialog"
+          aria-modal="true"
+        >
+          <div
+            className="fixed inset-0 bg-black/20 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+          ></div>
+          <div className="fixed inset-y-0 right-0 w-full overflow-y-auto bg-white/10 backdrop-blur-xl px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/20 rounded-l-3xl shadow-xl">
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5 flex items-center">
                 <Image
@@ -192,6 +201,6 @@ export default function Header() {
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 }
