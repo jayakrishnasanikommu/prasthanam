@@ -2,18 +2,21 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { BookmarkIcon } from "@heroicons/react/24/outline";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
-const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+const handleSmoothScroll = (
+  e: React.MouseEvent<HTMLAnchorElement>,
+  href: string
+) => {
   if (href.startsWith("#")) {
     e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
       const headerOffset = 100;
       const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
 
       window.scrollTo({
         top: offsetPosition,
@@ -64,16 +67,13 @@ export default function HeroCard({
       <CardContent className="p-8">
         <div className="flex items-start justify-between mb-6">
           <div className="flex-1">
-            <div className="flex items-center gap-2 mb-2">
-              <h2 className="text-xl font-semibold text-gray-900">{title}</h2>
-              <button className="text-gray-400 hover:text-amber-700">
-                <BookmarkIcon className="h-5 w-5" />
-              </button>
-            </div>
+            <h2 className="text-xl font-semibold text-gray-900 mb-2">
+              {title}
+            </h2>
             <div className="mb-2">
               <p className="text-sm text-gray-600">{location}</p>
               <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`}
+                href="https://www.google.com/maps/place/JAYA+LAKSHMI+NILAYAM/@17.5479263,78.3645776,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb8d006dbebc29:0xf65a937aded096cf!8m2!3d17.5479212!4d78.3671525!16s%2Fg%2F11ypl394yr?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs text-amber-700 hover:text-amber-800 font-medium underline mt-1 inline-block"
@@ -190,4 +190,3 @@ export default function HeroCard({
     </Card>
   );
 }
-

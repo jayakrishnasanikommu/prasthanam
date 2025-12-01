@@ -14,6 +14,7 @@ interface ProjectModalProps {
     size?: string;
     images: string[];
     description: string;
+    mapsUrl?: string;
   } | null;
   isOpen: boolean;
   onClose: () => void;
@@ -192,7 +193,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                   )}
                 </div>
                 <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(project.location)}`}
+                  href={project.mapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(project.location)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-amber-700 hover:text-amber-800 font-medium underline"
