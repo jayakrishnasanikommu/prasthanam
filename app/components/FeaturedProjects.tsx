@@ -138,7 +138,7 @@ export default function FeaturedProjects() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex items-center justify-between mb-12">
             <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-              Featured Projects
+              Projects
             </h2>
             <Button variant="outline" className="hidden sm:flex">
               View all &gt;
@@ -158,9 +158,9 @@ export default function FeaturedProjects() {
                     fill
                     className="object-cover"
                   />
-                  <Badge className="absolute top-4 right-4 bg-amber-700 text-white">
+                  {/* <Badge className="absolute top-4 right-4 bg-amber-700 text-white">
                     {project.type}
-                  </Badge>
+                  </Badge> */}
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">

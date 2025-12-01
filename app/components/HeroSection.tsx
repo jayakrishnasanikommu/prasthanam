@@ -50,7 +50,7 @@ export default function HeroSection() {
           <div className="space-y-6">
             {/* Jayalakshmi Nilayam Card */}
             <HeroCard
-              title="Jayalakshmi Nilayam"
+              title="Jaya Lakshmi Nilayam"
               location="KRCR Colony, Bachupally, Hyderabad"
               availability="1 & 2 BHK flats are available"
               primaryAction={{
