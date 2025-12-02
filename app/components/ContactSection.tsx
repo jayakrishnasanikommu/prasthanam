@@ -249,7 +249,7 @@ export default function ContactSection() {
                   </a>
                   {/* Facebook */}
                   <a
-                    href="#"
+                    href="https://www.facebook.com/profile.php?id=61583978966830"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-50 hover:bg-amber-50 transition-colors group"
