@@ -6,6 +6,7 @@ import FeaturedProjects from "./components/FeaturedProjects";
 import WhyChooseSection from "./components/WhyChooseSection";
 import ServicesSection from "./components/ServicesSection";
 import ContactSection from "./components/ContactSection";
+import WhatsAppFAB from "./components/WhatsAppFAB";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <ServicesSection />
         <ContactSection />
       </main>
+      <WhatsAppFAB />
     </div>
   );
 }

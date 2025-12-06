@@ -194,7 +194,7 @@ export default function ContactSection() {
 
           {/* Contact Information */}
           <div className="space-y-6">
-            <Card className="bg-white">
+            {/* <Card className="bg-white">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-amber-100">
@@ -222,7 +222,7 @@ export default function ContactSection() {
                   </div>
                 </div>
               </CardContent>
-            </Card>
+            </Card> */}
 
             <Card className="bg-white">
               <CardHeader>
