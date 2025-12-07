@@ -156,8 +156,12 @@ export default function FeaturedProjects() {
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
+      const isMobile = window.innerWidth < 768;
+      const scrollAmount = isMobile
+        ? window.innerWidth - 48 + 16 // viewport width - padding (3rem = 48px) + gap
+        : 336; // 320px (w-80) + 16px gap
       scrollContainerRef.current.scrollBy({
-        left: -400,
+        left: -scrollAmount,
         behavior: "smooth",
       });
     }
@@ -165,8 +169,12 @@ export default function FeaturedProjects() {
 
   const scrollRight = () => {
     if (scrollContainerRef.current) {
+      const isMobile = window.innerWidth < 768;
+      const scrollAmount = isMobile
+        ? window.innerWidth - 48 + 16 // viewport width - padding (3rem = 48px) + gap
+        : 336; // 320px (w-80) + 16px gap
       scrollContainerRef.current.scrollBy({
-        left: 400,
+        left: scrollAmount,
         behavior: "smooth",
       });
     }
@@ -200,13 +208,13 @@ export default function FeaturedProjects() {
 
           <div
             ref={scrollContainerRef}
-            className="flex gap-8 overflow-x-auto scrollbar-hide pb-4 scroll-smooth"
+            className="flex gap-4 md:gap-8 overflow-x-auto scrollbar-hide pb-4 scroll-smooth snap-x snap-mandatory"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {projects.map((project) => (
               <Card
                 key={project.id}
-                className="overflow-hidden hover:shadow-2xl transition-all duration-300 rounded-2xl border-0 shadow-xl flex-shrink-0 w-80"
+                className="overflow-hidden hover:shadow-2xl transition-all duration-300 rounded-2xl border-0 shadow-xl flex-shrink-0 w-[calc(100vw-3rem)] md:w-80 snap-start"
               >
                 {/* Image Container with Blurred Bottom */}
                 <div className="relative h-96 w-full overflow-hidden">
