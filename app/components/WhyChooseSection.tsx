@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import {
   CheckCircleIcon,
   ShieldCheckIcon,
@@ -6,6 +9,7 @@ import {
   WrenchScrewdriverIcon,
   HeartIcon,
 } from "@heroicons/react/24/outline";
+import { Button } from "@/components/ui/button";
 
 const benefits = [
   {
@@ -47,6 +51,8 @@ const benefits = [
 ];
 
 export default function WhyChooseSection() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <section className="py-24 bg-gradient-to-br from-amber-50 to-orange-50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -70,13 +76,16 @@ export default function WhyChooseSection() {
           </p>
         </div>
 
-        <div className="hidden md:grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Mobile: Show cards conditionally, Desktop: Always show all */}
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {benefits.map((benefit) => {
             const Icon = benefit.icon;
             return (
               <div
                 key={benefit.title}
-                className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+                className={`bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow ${
+                  isExpanded ? "" : "hidden"
+                } md:block`}
               >
                 <div className="flex items-start gap-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-amber-100 flex-shrink-0">
@@ -92,6 +101,16 @@ export default function WhyChooseSection() {
               </div>
             );
           })}
+        </div>
+
+        <div className="mt-8 flex justify-center md:hidden">
+          <Button
+            onClick={() => setIsExpanded(!isExpanded)}
+            variant="outline"
+            className="bg-white hover:bg-amber-50 text-amber-700 border-amber-300 hover:border-amber-400"
+          >
+            {isExpanded ? "View Less" : "View More"}
+          </Button>
         </div>
       </div>
     </section>

@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import {
   BuildingOffice2Icon,
   HomeModernIcon,
@@ -6,6 +9,7 @@ import {
   PaintBrushIcon,
   Cog6ToothIcon,
 } from "@heroicons/react/24/outline";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
@@ -51,6 +55,8 @@ const services = [
 ];
 
 export default function ServicesSection() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <section id="services" className="py-24 bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -69,13 +75,16 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        <div className="hidden md:grid grid-cols-2 gap-6 lg:grid-cols-4">
+        {/* Mobile: Show cards conditionally, Desktop: Always show all */}
+        <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
           {services.map((service) => {
             const Icon = service.icon;
             return (
               <div
                 key={service.name}
-                className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg p-6 hover:shadow-lg transition-shadow border border-amber-100"
+                className={`bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg p-6 hover:shadow-lg transition-shadow border border-amber-100 ${
+                  isExpanded ? "" : "hidden"
+                } md:block`}
               >
                 <div className="flex flex-col items-center text-center">
                   <div className="flex h-16 w-16 items-center justify-center rounded-lg bg-amber-700 mb-4">
@@ -89,6 +98,16 @@ export default function ServicesSection() {
               </div>
             );
           })}
+        </div>
+
+        <div className="mt-8 flex justify-center md:hidden">
+          <Button
+            onClick={() => setIsExpanded(!isExpanded)}
+            variant="outline"
+            className="bg-white hover:bg-amber-50 text-amber-700 border-amber-300 hover:border-amber-400"
+          >
+            {isExpanded ? "View Less" : "View More"}
+          </Button>
         </div>
       </div>
     </section>

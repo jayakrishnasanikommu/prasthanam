@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import {
   BuildingOfficeIcon,
   HomeIcon,
@@ -5,6 +8,7 @@ import {
   PaintBrushIcon,
   Cog6ToothIcon,
 } from "@heroicons/react/24/outline";
+import { Button } from "@/components/ui/button";
 
 const expertiseAreas = [
   {
@@ -40,6 +44,8 @@ const expertiseAreas = [
 ];
 
 export default function ExpertiseSection() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <section className="py-24 bg-amber-50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -60,13 +66,16 @@ export default function ExpertiseSection() {
           </p>
         </div>
 
-        <div className="hidden md:grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Mobile: Show cards conditionally, Desktop: Always show all */}
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {expertiseAreas.map((area) => {
             const Icon = area.icon;
             return (
               <div
                 key={area.name}
-                className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+                className={`bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow ${
+                  isExpanded ? "" : "hidden"
+                } md:block`}
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-amber-100">
@@ -80,6 +89,16 @@ export default function ExpertiseSection() {
               </div>
             );
           })}
+        </div>
+
+        <div className="mt-8 flex justify-center md:hidden">
+          <Button
+            onClick={() => setIsExpanded(!isExpanded)}
+            variant="outline"
+            className="bg-white hover:bg-amber-50 text-amber-700 border-amber-300 hover:border-amber-400"
+          >
+            {isExpanded ? "View Less" : "View More"}
+          </Button>
         </div>
       </div>
     </section>

@@ -87,10 +87,6 @@ export default function ContactSection() {
           <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-8">
             Contact Us
           </h2>
-          <p className="text-lg leading-8 text-gray-600">
-            Contact Prasthanam Developers in Hyderabad today to discuss your
-            project and see how they can execute it.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">

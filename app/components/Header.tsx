@@ -66,11 +66,11 @@ export default function Header() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             <Link
-              href="#services"
-              onClick={(e) => handleSmoothScroll(e, "#services")}
+              href="#about"
+              onClick={(e) => handleSmoothScroll(e, "#about")}
               className="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-700"
             >
-              Services
+              About
             </Link>
             <Link
               href="#projects"
@@ -80,11 +80,11 @@ export default function Header() {
               Projects
             </Link>
             <Link
-              href="#about"
-              onClick={(e) => handleSmoothScroll(e, "#about")}
+              href="#services"
+              onClick={(e) => handleSmoothScroll(e, "#services")}
               className="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-700"
             >
-              About
+              Services
             </Link>
             <Link
               href="#contact"
@@ -142,14 +142,14 @@ export default function Header() {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   <Link
-                    href="#services"
+                    href="#about"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     onClick={(e) => {
-                      handleSmoothScroll(e, "#services");
+                      handleSmoothScroll(e, "#about");
                       setMobileMenuOpen(false);
                     }}
                   >
-                    Services
+                    About
                   </Link>
                   <Link
                     href="#projects"
@@ -162,14 +162,14 @@ export default function Header() {
                     Projects
                   </Link>
                   <Link
-                    href="#about"
+                    href="#services"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     onClick={(e) => {
-                      handleSmoothScroll(e, "#about");
+                      handleSmoothScroll(e, "#services");
                       setMobileMenuOpen(false);
                     }}
                   >
-                    About
+                    Services
                   </Link>
                   <Link
                     href="#contact"
