@@ -238,7 +238,7 @@ export default function ContactSection() {
                     }
                     className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-50 hover:bg-amber-50 transition-colors group"
                   >
-                    <PhoneIcon className="h-6 w-6 text-gray-600 group-hover:text-amber-700" />
+                    <PhoneIcon className="h-6 w-6 text-amber-700" />
                     <span className="text-xs mt-2 text-gray-600 group-hover:text-amber-700">
                       Phone
                     </span>
@@ -248,10 +248,10 @@ export default function ContactSection() {
                     href="https://www.facebook.com/profile.php?id=61583978966830"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-50 hover:bg-amber-50 transition-colors group"
+                    className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-50 hover:bg-blue-50 transition-colors group"
                   >
                     <svg
-                      className="h-6 w-6 text-gray-600 group-hover:text-blue-600"
+                      className="h-6 w-6 text-blue-600"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -266,10 +266,10 @@ export default function ContactSection() {
                     href="https://www.instagram.com/prasthanamdevelopers"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-50 hover:bg-amber-50 transition-colors group"
+                    className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-50 hover:bg-pink-50 transition-colors group"
                   >
                     <svg
-                      className="h-6 w-6 text-gray-600 group-hover:text-pink-600"
+                      className="h-6 w-6 text-pink-600"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -284,10 +284,10 @@ export default function ContactSection() {
                     href="https://x.com/Prasthanamdev"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-50 hover:bg-amber-50 transition-colors group"
+                    className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors group"
                   >
                     <svg
-                      className="h-6 w-6 text-gray-600 group-hover:text-black"
+                      className="h-6 w-6 text-black"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -302,10 +302,10 @@ export default function ContactSection() {
                     href="https://www.youtube.com/@PRASTHANAMDEVELOPERS"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-50 hover:bg-amber-50 transition-colors group"
+                    className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-50 hover:bg-red-50 transition-colors group"
                   >
                     <svg
-                      className="h-6 w-6 text-gray-600 group-hover:text-red-600"
+                      className="h-6 w-6 text-red-600"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -327,10 +327,10 @@ export default function ContactSection() {
                     }
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-50 hover:bg-amber-50 transition-colors group"
+                    className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-50 hover:bg-green-50 transition-colors group"
                   >
                     <svg
-                      className="h-6 w-6 text-gray-600 group-hover:text-green-600"
+                      className="h-6 w-6 text-green-600"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >

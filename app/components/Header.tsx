@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Button } from "@/components/ui/button";
@@ -8,6 +8,17 @@ import Link from "next/link";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleSmoothScroll = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -33,9 +44,17 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200/50 rounded-b-3xl shadow-sm">
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border border-gray-200/50 transition-all duration-300 ${
+          isScrolled
+            ? "mx-4 mt-4 rounded-3xl shadow-lg"
+            : "rounded-b-3xl border-b shadow-sm"
+        }`}
+      >
         <nav
-          className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8"
+          className={`mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8 transition-all duration-300 ${
+            isScrolled ? "py-3" : "py-4"
+          }`}
           aria-label="Global"
         >
           <div className="flex lg:flex-1">
@@ -45,7 +64,9 @@ export default function Header() {
                 alt="Prasthanam Developers"
                 width={200}
                 height={60}
-                className="h-12 w-auto md:h-14 lg:h-16 object-contain"
+                className={`w-auto object-contain transition-all duration-300 ${
+                  isScrolled ? "h-10 md:h-12 lg:h-14" : "h-12 md:h-14 lg:h-16"
+                }`}
                 priority
               />
             </Link>

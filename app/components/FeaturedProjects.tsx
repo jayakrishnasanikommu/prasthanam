@@ -98,40 +98,38 @@ Special Features:
 
 This project demonstrates our ability to deliver residential developments that exceed expectations, providing residents with a superior living experience in one of Hyderabad's most desirable locations.`,
   },
-  // {
-  //   id: 4,
-  //   name: "Premium Bungalow Project",
-  //   location: "Hyderabad, Telangana",
-  //   type: "Residential",
-  //   image:
-  //     "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop",
-  //   images: [
-  //     "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop",
-  //   ],
-  //   description: `Premium Bungalow Project offers luxurious standalone homes designed for those who appreciate space, privacy, and elegance. Each bungalow is crafted with meticulous attention to detail.`,
-  // },
+  {
+    id: 4,
+    name: "Dwaraka Mayee",
+    location: "Attapur, Hyderabad, Telangana",
+    type: "Residential",
+    image: "/attapur-building.jpeg",
+    images: ["/attapur-building.jpeg"],
+    mapsUrl:
+      "https://www.google.com/maps/place/17%C2%B022'10.1%22N+78%C2%B025'49.4%22E/@17.369463,78.430391,17z/data=!3m1!4b1!4m4!3m3!8m2!3d17.369463!4d78.430391?entry=ttu&g_ep=EgoyMDI1MTIwNy4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D",
+    description: `Dwaraka Mayee is a well-built independent house designed for comfortable and peaceful living. This home offers a blend of practical layout, quality construction, and a sense of privacy that comes with owning an individual property. Thoughtfully planned spaces and reliable structural work make it a great fit for families looking for a long-term home.
+
+With easy access to everyday essentials and a calm residential setting, Dwaraka Mayee provides a balanced living experience—comfortable, convenient, and genuinely homely.`,
+  },
   {
     id: 5,
     name: "Sree Krishna Sai Residency",
     location: "Hyderabad, Telangana",
     type: "Residential",
-    image:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=400&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=400&fit=crop",
-    ],
-    description: `Sree Krishna Sai Residency is a well-designed residential project that offers comfortable and modern living spaces. This development showcases quality construction and thoughtful planning.
+    image: "/sree-krishna-sai-resi.jpeg",
+    images: ["/sree-krishna-sai-resi.jpeg"],
+    description: `Sree Krishna Sai Residency is a thoughtfully planned residential project designed to offer a comfy, modern living experience. The apartments are built with solid attention to detail and a layout that actually makes sense for everyday life.
 
-Key Features:
-• Modern residential units with contemporary design
-• Prime location with excellent connectivity
-• Quality construction with attention to detail
-• Well-planned layouts for maximum comfort
-• Secure and gated community
-• Professional property management
-• Easy access to essential amenities
+Key Highlights
+• Contemporary-style apartments that feel modern without being overdone
+• Located in a well-connected area, making daily travel way less of a headache
+• Strong, reliable construction with quality materials
+• Smart, space-efficient layouts for better comfort and usability
+• Secure, gated community for peace of mind
+• Managed by a professional team that keeps the property running smoothly
+• Close to essential amenities like stores, transport, and daily needs
 
-This project reflects our commitment to creating quality residential spaces that provide residents with a comfortable and convenient living experience.`,
+Overall, the project reflects a genuine focus on quality living — a space designed to be comfortable, convenient, and future-ready.`,
     mapsUrl:
       "https://www.google.com/maps/place/Sree+Krishna+Sai+Residency/@17.4613565,78.3475607,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb933e2a870071:0x1f5b2e598d2ad2c3!8m2!3d17.4613514!4d78.3501356!16s%2Fg%2F11r7l831gg?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D",
   },
