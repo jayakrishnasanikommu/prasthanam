@@ -2,7 +2,11 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { HomeIcon, ArrowPathIcon, PhoneIcon } from "@heroicons/react/24/outline";
+import {
+  HomeIcon,
+  ArrowPathIcon,
+  PhoneIcon,
+} from "@heroicons/react/24/outline";
 
 const configurations = [
   {
@@ -31,7 +35,7 @@ export default function FlatConfigurations() {
             Flat Configurations
           </h2>
           <p className="text-lg text-gray-600 flex items-center justify-center gap-2">
-            <ArrowPathIcon className="h-5 w-5 text-amber-700" />
+            {/* <ArrowPathIcon className="h-5 w-5 text-amber-700" /> */}
             <span>Vastu compliant east & north facing units</span>
           </p>
         </div>
@@ -40,7 +44,10 @@ export default function FlatConfigurations() {
           {configurations.map((config, index) => {
             const Icon = config.icon;
             return (
-              <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow">
+              <Card
+                key={index}
+                className="bg-white shadow-lg hover:shadow-xl transition-shadow"
+              >
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-2">
                     <Icon className="h-8 w-8 text-amber-700" />
@@ -71,4 +78,3 @@ export default function FlatConfigurations() {
     </section>
   );
 }
-
