@@ -11,9 +11,9 @@ export async function POST(request: NextRequest) {
     const { name, email, phone, message } = body;
 
     // Validate required fields
-    if (!name || !email || !message) {
+    if (!name || !message) {
       return NextResponse.json(
-        { error: "Name, email, and message are required" },
+        { error: "Name and message are required" },
         { status: 400 }
       );
     }
@@ -46,12 +46,12 @@ export async function POST(request: NextRequest) {
         html: `
           <h2>New Contact Form Submission</h2>
           <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
+          ${email ? `<p><strong>Email:</strong> ${email}</p>` : ""}
           ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ""}
           <p><strong>Message:</strong></p>
           <p>${message.replace(/\n/g, "<br>")}</p>
         `,
-        replyTo: email, // This allows replying directly to the form submitter
+        replyTo: email || undefined, // This allows replying directly to the form submitter
       });
 
       if (result.error) {

@@ -53,6 +53,7 @@ export default function HeroSection() {
               title="Jaya Lakshmi Nilayam"
               location="KRCR Colony, Bachupally, Hyderabad"
               availability="1 & 2 BHK flats are available"
+              projectLink="/projects/bachupally"
               primaryAction={{
                 label: "Contact Us",
                 href: "#contact",

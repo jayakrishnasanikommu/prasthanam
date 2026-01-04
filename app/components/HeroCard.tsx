@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { MapPinned, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -49,6 +50,7 @@ interface HeroCardProps {
   };
   secondaryInfo?: string;
   availability?: string;
+  projectLink?: string;
 }
 
 export default function HeroCard({
@@ -61,30 +63,42 @@ export default function HeroCard({
   primaryAction,
   secondaryInfo,
   availability,
+  projectLink,
 }: HeroCardProps) {
   return (
     <Card className="bg-white/95 backdrop-blur-md shadow-xl">
       <CardContent className="p-8">
         <div className="flex items-start justify-between mb-6">
           <div className="flex-1">
-            <h2 className="text-xl font-semibold text-gray-900 mb-2">
-              {title}
-            </h2>
-            <div className="mb-2">
-              <p className="text-sm text-gray-600">{location}</p>
+            <div className="flex items-center justify-between mb-2">
+              <h2 className="text-xl font-semibold text-gray-900">
+                {title}
+              </h2>
               <a
                 href="https://www.google.com/maps/place/JAYA+LAKSHMI+NILAYAM/@17.5479263,78.3645776,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb8d006dbebc29:0xf65a937aded096cf!8m2!3d17.5479212!4d78.3671525!16s%2Fg%2F11ypl394yr?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-amber-700 hover:text-amber-800 font-medium underline mt-1 inline-block"
+                className="inline-flex items-center text-amber-700 hover:text-amber-800 transition-colors"
+                aria-label="View on Google Maps"
               >
-                View on Google Maps
+                <MapPinned className="h-5 w-5" />
               </a>
+            </div>
+            <div className="mb-2">
+              <p className="text-sm text-gray-600">{location}</p>
             </div>
             {availability && (
               <p className="text-sm font-medium text-amber-700 mt-2">
                 {availability}
               </p>
+            )}
+            {projectLink && (
+              <Link
+                href={projectLink}
+                className="text-sm text-amber-700 hover:text-amber-800 font-medium underline mt-2 inline-flex items-center gap-1"
+              >
+                Visit Project Page <ArrowRight className="h-4 w-4" />
+              </Link>
             )}
           </div>
         </div>
