@@ -33,8 +33,8 @@ export default function WhyChooseBachupally() {
           {/* Right: Image */}
           <div className="relative h-[400px] lg:h-[500px] w-full rounded-2xl overflow-hidden shadow-xl">
             <Image
-              src="/hero-section-house.jpeg"
-              alt="Bright, airy apartment interior"
+              src="/jaya-laksmi-nilayam-irl.jpeg"
+              alt="Jaya Lakshmi Nilayam - Real building image"
               fill
               className="object-cover"
             />
