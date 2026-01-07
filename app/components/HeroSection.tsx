@@ -30,8 +30,11 @@ export default function HeroSection() {
       <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-4xl text-center mb-12">
           <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl drop-shadow-sm">
-            Real estate for living and investments
+            HMDA Approved Flats in Bachupally
           </h1>
+          <p className="mt-4 text-xl sm:text-2xl text-gray-700 font-medium">
+            Ready to Move Homes Near Silver Oaks School
+          </p>
         </div>
 
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">

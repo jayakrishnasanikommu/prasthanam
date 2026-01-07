@@ -14,8 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Prasthanam Developers - Real Estate for Living and Investments",
-  description: "Prasthanam Developers in Hyderabad - Leading provider of comprehensive contracting and building services. Specializing in apartments, villas, bungalows, residential, and commercial buildings.",
+  title: "HMDA Approved Flats in Bachupally | Prasthanam Developers",
+  description: "Buy HMDA-approved 1 & 2 BHK flats in Bachupally near Silver Oaks School. Strong UDS, ready to move homes by Prasthanam Developers. Book a site visit today.",
+  keywords: "HMDA approved flats Bachupally, flats near Silver Oaks School, ready to move flats Bachupally, 1 BHK Bachupally, 2 BHK Bachupally, Prasthanam Developers, UDS apartments Hyderabad",
 };
 
 export default function RootLayout({

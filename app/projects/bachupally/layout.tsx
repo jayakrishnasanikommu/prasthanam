@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "HMDA Approved Flats in Bachupally | Jaya Lakshmi Nilayam | Prasthanam Developers",
-  description: "HMDA Approved, Ready-to-Occupy 1 & 2 BHK flats in Bachupally. East & North facing units with clear title. Bank loan eligible. Immediate possession available. Book your site visit today!",
-  keywords: "HMDA approved flats Bachupally, ready to occupy flats, 1 BHK Bachupally, 2 BHK Bachupally, Jaya Lakshmi Nilayam, Prasthanam Developers",
+  title: "1 & 2 BHK Ready to Move Flats in Bachupally | Prasthanam Developers",
+  description:
+    "Explore east & north facing flats with high UDS in Bachupally. Transparent pricing, quality construction & excellent location advantages. HMDA approved, ready to occupy.",
+  keywords:
+    "1 BHK flats in Bachupally, 2 BHK flats in Bachupally, east facing flats Bachupally, new apartments Hyderabad, affordable flats Bachupally, ready to move flats Bachupally, HMDA approved projects Bachupally",
+  openGraph: {
+    title:
+      "1 & 2 BHK Ready to Move Flats in Bachupally | Prasthanam Developers",
+    description:
+      "Explore east & north facing flats with high UDS in Bachupally. Transparent pricing, quality construction & excellent location advantages.",
+    type: "website",
+  },
 };
 
 export default function BachupallyLayout({
@@ -13,4 +22,3 @@ export default function BachupallyLayout({
 }) {
   return children;
 }
-
