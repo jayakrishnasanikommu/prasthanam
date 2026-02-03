@@ -1,4 +1,5 @@
 "use client";
+import Script from "next/script";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircleIcon, PhoneIcon } from "@heroicons/react/24/outline";
@@ -14,7 +15,16 @@ export default function ThankYouPage() {
     : "#";
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center px-6 py-12">
+    <>
+      {/* Event snippet for Submit lead form conversion page */}
+      <Script id="google-ads-conversion" strategy="afterInteractive">
+        {`
+          if (typeof window !== 'undefined' && window.gtag) {
+            gtag('event', 'conversion', {'send_to': 'AW-17921804559/dKVHCI6Iw_AbEI-S5OFC'});
+          }
+        `}
+      </Script>
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center px-6 py-12">
       <div className="max-w-2xl w-full">
         <Card className="bg-white shadow-2xl">
           <CardHeader className="text-center pb-4">
@@ -81,7 +91,7 @@ export default function ThankYouPage() {
           </CardContent>
         </Card>
       </div>
-    </div>
+    </>
   );
 }
 
