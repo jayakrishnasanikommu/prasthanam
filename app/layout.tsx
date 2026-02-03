@@ -29,17 +29,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Google tag (gtag.js) */}
+        {/* Google Ads conversion tracking */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-8XQ5MK9MDM"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17921804559"
           strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-ads" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-8XQ5MK9MDM');
+            gtag('config', 'AW-17921804559');
           `}
         </Script>
         {children}
